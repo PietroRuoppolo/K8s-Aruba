@@ -3,9 +3,8 @@
 ## 📖 Descrizione
 
 Questo progetto mostra come distribuire un’applicazione di **ticketing** su un cluster **Aruba Managed Kubernetes**, rendendola accessibile dall’esterno tramite **NGINX Ingress Controller** e un **Service LoadBalancer**.  
-Il sistema integra un database **MongoDB** con storage persistente, configurato tramite **Persistent Volume Claim** e provisioning dinamico.
+Il sistema integra un database **MongoDB** con storage persistente.
 
-Il progetto dimostra competenze nella progettazione e gestione di infrastrutture Kubernetes reali: networking, sicurezza, ingressi, deployment multi-AZ e integrazione tra applicazione e database.
 
 ---
 
@@ -17,7 +16,6 @@ Il progetto dimostra competenze nella progettazione e gestione di infrastrutture
 - 📦 Implementare persistenza dati con PVC e MongoDB  
 - 🌐 Esporre l’app pubblicamente tramite Ingress Controller  
 - 💪 Garantire resilienza con distribuzione multi-AZ  
-- 🧩 Dimostrare architettura a microservizi in ambiente Kubernetes  
 
 ---
 
