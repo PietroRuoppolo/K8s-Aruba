@@ -81,14 +81,4 @@ Poi eliminare:
 	•	Cluster Kubernetes
 	•	VPC e subnet su Aruba
 
-📘 Conclusione
-
-Questo progetto rappresenta un esempio completo di deployment su cloud reale, mostrando come:
-	•	costruire un ambiente Kubernetes robusto
-	•	integrare servizi applicativi e database
-	•	configurare ingressi e routing HTTP avanzati
-	•	utilizzare pattern di resilienza multi-AZ
-
-È un’ottima base per ruoli come Cloud Engineer, DevOps, Kubernetes Specialist oppure come progetto portfolio su GitHub.
-
 
