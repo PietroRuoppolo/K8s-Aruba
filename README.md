@@ -42,38 +42,6 @@ L’architettura è composta da tre livelli principali:
 - Service interno `mongo-service` per accesso dai microservizi
 
 ---
-
-## 📂 Struttura del repository
-k8s-project/
-│
-├── deployments/
-│   ├── common/
-│   │   ├── ns-and-sa.yaml
-│   │   ├── ingress-class.yaml
-│   │   ├── nginx-config.yaml
-│   │   └── ingress-rbac.yaml
-│   ├── daemon-set/
-│   │   └── nginx-ingress.yaml
-│   ├── mongo-deployment.yaml
-│   └── ticketing-deployment.yaml
-│
-├── services/
-│   ├── ingress-service.yaml
-│   ├── mongo-service.yaml
-│   └── ticketing-service.yaml
-│
-├── persistentvolumeclaim/
-│   └── mongo-pvc.yaml
-│
-├── ingress/
-│   └── ticketing-ingress.yaml
-│
-└── security/
-├── rbac.yaml
-└── secret.yaml
-
----
-
 ## 🌐 Endpoint principali dell’app
 
 | Metodo | Endpoint | Descrizione |
