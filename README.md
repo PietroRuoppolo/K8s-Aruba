@@ -44,3 +44,83 @@ L’architettura è composta da tre livelli principali:
 ---
 
 ## 📂 Struttura del repository
+k8s-project/
+│
+├── deployments/
+│   ├── common/
+│   │   ├── ns-and-sa.yaml
+│   │   ├── ingress-class.yaml
+│   │   ├── nginx-config.yaml
+│   │   └── ingress-rbac.yaml
+│   ├── daemon-set/
+│   │   └── nginx-ingress.yaml
+│   ├── mongo-deployment.yaml
+│   └── ticketing-deployment.yaml
+│
+├── services/
+│   ├── ingress-service.yaml
+│   ├── mongo-service.yaml
+│   └── ticketing-service.yaml
+│
+├── persistentvolumeclaim/
+│   └── mongo-pvc.yaml
+│
+├── ingress/
+│   └── ticketing-ingress.yaml
+│
+└── security/
+├── rbac.yaml
+└── secret.yaml
+
+---
+
+## 🌐 Endpoint principali dell’app
+
+| Metodo | Endpoint | Descrizione |
+|-------|----------|-------------|
+| `GET` | `/health` | Stato dell'app |
+| `GET` | `/tickets` | Recupera i ticket |
+| `POST` | `/tickets` | Crea un nuovo ticket |
+| `GET` | `/` | Pagina principale |
+
+*(Gli endpoint possono variare in base all’applicazione effettiva.)*
+
+---
+---
+
+## 🚀 Deployment del progetto
+
+Assicurati che:
+- il tuo kubeconfig Aruba sia configurato  
+- `kubectl` sia operativo  
+- il cluster abbia nodi su più AZ  
+
+🔍 Verifica dello stato del cluster
+kubectl get pods -A
+kubectl get svc -A
+kubectl get ingress -A
+kubectl get pvc -A
+
+Quando il Service di tipo LoadBalancer del controller ottiene un EXTERNAL-IP, l’app diventa raggiungibile dall’esterno.
+
+🧹 Pulizia completa
+kubectl delete namespace ticketing-app
+kubectl delete pvc --all -A
+kubectl delete pv --all
+
+Poi eliminare:
+	•	Load Balancer
+	•	Cluster Kubernetes
+	•	VPC e subnet su Aruba
+
+📘 Conclusione
+
+Questo progetto rappresenta un esempio completo di deployment su cloud reale, mostrando come:
+	•	costruire un ambiente Kubernetes robusto
+	•	integrare servizi applicativi e database
+	•	configurare ingressi e routing HTTP avanzati
+	•	utilizzare pattern di resilienza multi-AZ
+
+È un’ottima base per ruoli come Cloud Engineer, DevOps, Kubernetes Specialist oppure come progetto portfolio su GitHub.
+
+
